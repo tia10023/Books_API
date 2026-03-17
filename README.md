@@ -1,17 +1,6 @@
 Books API 📚
 RESTful API completa per la gestione di un catalogo librario con MySQL, Express e Sequelize ORM.
 
-[
-[
-[
-[
-[
-
-✨ Demo Live
-Prova l'API completa → localhost:3000
-
-(Aggiungi screenshot/GIF dopo test)
-
 🚀 Caratteristiche
 CRUD completo per libri (GET/POST/PUT/DELETE)
 
