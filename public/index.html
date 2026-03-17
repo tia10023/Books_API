@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .book {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete {
+            background: #dc3545 !important;
+        }
+
+        .edit {
+            background: #ffc107 !important;
+            color: black !important;
+            margin-right: 10px;
+        }
+
+        #booksList {
+            min-height: 200px;
+        }
+
+        .loading {
+            text-align: center;
+            color: #666;
+        }
+
+        .error {
+            color: red;
+            background: #ffe6e6;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Books API Client (MySQL + Express)</h1>
+
+    <form id="bookForm">
+        <input id="id" type="hidden" value="">
+        <input id="title" placeholder="Titolo" required>
+        <input id="author" placeholder="Autore" required>
+        <input id="year" type="number" placeholder="Anno" required min="1000" max="2100">
+        <input id="genre" placeholder="Genere" value="Unknown">
+        <label><input id="isPublished" type="checkbox"> Pubblicato</label>
+        <button type="submit" id="submitBtn">➕ Aggiungi Libro</button>
+        <button type="button" id="clearBtn">✨ Nuovo</button>
+    </form>
+
+    <!-- Lista Libri -->
+    <div id="booksList">
+        <div class="loading">Caricamento libri...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
